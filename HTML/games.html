@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861319270c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/games.css" />
+    <link rel="stylesheet" href="../CSS/nav-style.css" />
+    <title>Games</title>
+</head>
+<body>
+    <nav>
+        <img src="../Assets/SuicideLogo.png" alt="Logo" class="logo" />
+        <div class="desktop-nav">
+            <div class="nav-links">
+                <a href="../HTML/index.html">HOME</a>
+                <a href="../HTML/games.html">GAMES</a>
+                <a href="about.html">ABOUT</a>
+            </div>
+            <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+        </div>
+        <div class="mobile-nav">
+            <label for="menu-checkbox" class="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu-checkbox">
+            <img src="../Assets/SuicideLogo.png" alt="Logo" class="logo" />
+            <div class="side-menu">
+                <label for="menu-checkbox" class="menu-toggle" id="close-menu"><i class="fa-solid fa-x"></i></label>
+                <a href="../HTML/index.html">HOME</a>
+                <a href="../HTML/games.html">GAMES</a>
+                <a href="about.html">ABOUT</a>
+            </div>
+            <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+        </div>
+    </nav>
+    <main>
+        <header>
+            <a href="games.html" class="a-link">
+                <h2>Games Page</h2>
+            </a>
+        </header>
+        <section class="games-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img src="../Assets/img/game1.jpeg" alt="game1" id="slide-1"/>
+                    <img src="../Assets/img/game2.jpeg" alt="game2" id="slide-2"/>
+                    <img src="../Assets/img/game3.jpg" alt="game3" id="slide-3"/>
+                    <img src="../Assets/img/game4.jpeg" alt="game4" id="slide-4"/>
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>                    
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <i class="fa-brands fa-youtube"></i>
+        <h3>Suicide Squad Gaming 2023</h3>
+        <a href="" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+    <script src="../JS/main.js" type="module"></script>
+    <script src="../JS/games.js"></script>
+</body>
+</html>

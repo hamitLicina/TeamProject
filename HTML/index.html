@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/861319270c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/nav-style.css" />
+    <title>SS Gaming</title>
+</head>
+<body>
+    <nav>
+        <img src="../Assets/SuicideLogo.png" alt="Logo" class="logo" />
+        <div class="desktop-nav">
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="games.html">GAMES</a>
+                <a href="about.html">ABOUT</a>
+            </div>
+            <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+        </div>
+        <div class="mobile-nav">
+            <label for="menu-checkbox" class="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="menu-checkbox">
+            <img src="../Assets/SuicideLogo.png" alt="Logo" class="logo" />
+            <div class="side-menu">
+                <label for="menu-checkbox" class="menu-toggle" id="close-menu"><i class="fa-solid fa-x"></i></label>
+                <a href="../HTML/index.html">HOME</a>
+                <a href="games.html">GAMES</a>
+                <a href="about.html">ABOUT</a>
+            </div>
+            <button class="theme-button"><i class="fa-regular fa-sun"></i></button>
+        </div>
+    </nav>
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="search-input">
+            <button id="search-button">Search</button>
+        </div>
+    </div>
+    <main>
+        <section class="section-about">
+            <h1>About</h1>
+            <div id="about-container">
+                <p>Search for a game!</p>
+            </div>
+        </section>
+        <section class="section-release">
+            <h1>Release</h1>
+            <div id="release-container">
+                <p>We know when it was released!</p>
+            </div>
+        </section>
+        <section class="section-similar">
+            <h1>Similar Games</h1>
+            <div id="similar-container">
+                <p>We will show you similar games!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <i class="fa-brands fa-youtube"></i>
+        <h3>Suicide Squad Gaming 2023</h3>
+        <a href="" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+    <script src="../JS/main.js" type="module"></script>
+</body>
+</html>

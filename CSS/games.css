@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+    --primary-text: #ff8a00;
+    --secondary-text: #ffffff;
+    --primary-background: #13071c;
+    --secondary-background: #1a0725;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondary-background);
+    color: var(--primary-text);
+}
+
+header {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.games-container {
+    padding: 2rem;
+}
+
+.a-link {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.a-link:hover {
+    transform: scale(1.1);
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 4/3;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: contain;
+    overflow-y: hidden;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--secondary-text);
+    opacity: 0.75;
+    transition: opacity transform ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    background-color: var(--primary-text);
+}
+
+/* Styling for the search bar  */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+    margin-top: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar input[type="text"] {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-text);
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    max-width: 50dvw;
+    width: 600px;
+}
+
+::placeholder {
+    color: var(--primary-text);
+}
+
+.search-bar button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    border: 1px solid var(--primary-text);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: var(--primary-text);
+    color: var(--secondary-text);
+}
+
+.search-bar button:active {
+    scale: 0.96;
+}
+
+/* Styling for the footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    gap: 4rem;
+    background-color: var(--primary-background);
+    position: fixed;
+    bottom: 0;
+    box-shadow: 1px 1px 10px var(--primary-background);
+}
+
+footer i {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Queries 
+
+@media screen and (max-width: 748px) {
+    
+    footer {
+        gap: 2rem;
+    }
+    
+    section div {
+        width: 90vw;
+    }
+
+    section img {
+        width: 90vw;
+    }
+
+    section p {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .search-bar input[type="text"] {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .search-bar button {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    h1 {font-size: 1.5rem;}
+
+    h2 {font-size: 1rem;}
+
+    h3 {font-size: 0.8rem;}
+
+    p, a {font-size:0.8rem;}
+
+    footer i {font-size: 1rem;}
+    
+}
+*/

@@ -1,0 +1,92 @@
+/* Import google font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Setting color variables */
+
+:root {
+  --primary-text: #ff8a00;
+  --secondary-text: #ffffff;
+  --primary-background: #13071c;
+  --secondary-background: #1a0725;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+.about-img {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 10px;
+    border: 3px solid var(--primary-text);
+}
+
+.contact > a > i {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-info {
+    color: var(--primary-text);
+    font-size: 0.8rem;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid var(--primary-text);
+    border-radius: 2rem;
+    margin: 10px;
+    padding: 1rem;
+    flex-wrap: wrap;
+    height: 300px;
+    justify-self: center;
+}
+
+.contact {
+    display: flex;
+    gap: 2rem;
+}
+
+h6 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem;
+    margin-bottom: 9rem;
+}
+
+h6 > a {
+    text-decoration: underline;
+    color: var(--primary-text);
+    font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cards {
+        width: 80dvw;
+        max-width: 600px;
+        height: auto;
+    }
+}

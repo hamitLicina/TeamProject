@@ -1,0 +1,183 @@
+:root {
+    --primary-text: #ff8a00;
+    --secondary-text: #ffffff;
+    --primary-background: #13071c;
+    --secondary-background: #1a0725;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Global Styling to Remove overflow on X axis when mobile-nav is visible */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Styling for the Desktop nav header */
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+    align-items: center;
+    height: 90px;
+    background-color: var(--primary-background);
+    box-shadow: 1px 1px 10px var(--primary-background);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    color: var(--primary-text);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav img {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+
+/* Styling for the mobile header  */
+
+.side-menu a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#close-menu {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 1;
+    width: 20px;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.menu-toggle:hover {
+    scale: 1.1;
+}
+
+#menu-checkbox:checked~.side-menu {
+    right: 0;
+}
+
+.side-menu {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 300px;
+    background-color: var(--primary-text);
+    border-radius: 2rem 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.mobile-nav {
+    display: none;
+    justify-content: space-between;
+    padding: 0 10rem;
+    align-items: center;
+    height: 90px;
+    background-color: var(--primary-background);
+    box-shadow: 1px 1px 10px var(--primary-background);
+}
+
+/* Hover and click animations for anchors and icons */
+
+.nav-links a:hover, footer i:hover {
+    scale: 1.1;
+}
+
+.nav-links a:active, footer i:active {
+    scale: 0.9;
+}
+
+/* Styling for the theme button  */
+
+.theme-button {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 45px;
+    top: 30px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 748px) {
+    
+    .mobile-nav {
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .theme-button {
+        right: -170px;
+        top: 30px;
+        z-index: 3;
+        color: black;
+    }
+
+    #menu-checkbox:checked~.theme-button {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    nav img {
+        left: 30px;
+        top: 30px;
+        width: 30px;
+    }
+    
+}
